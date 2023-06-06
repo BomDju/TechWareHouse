@@ -12,7 +12,10 @@ export class CarrinhoComponent implements OnInit {
   total = 0;
   itensCarrinho: IProdutoCarrinho[] = [];
  
-  constructor(public carrinhoService: CarrinhoService, private router: Router){}
+  constructor(
+    public carrinhoService: CarrinhoService, 
+    private router: Router
+    ){}
 
   ngOnInit(): void {
     this.itensCarrinho = this.carrinhoService.obtemCarrinho();

@@ -1,6 +1,6 @@
 <header class="main-header">
     
-    <h1 class="main-header__title"> 
+    <h1 routerLink="produtos" class="main-header__title"> 
          <span class="main-header__title--black">Tech</span><span class="main-header__title--orange">Warehouse</span>
     </h1>
     <div class="container-menu">
@@ -13,7 +13,7 @@
                 <a routerLink="carrinho">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Carrinho
-                    <span class="badge-carrinho">{{carrinhoSerivce.obtemCarrinho().length}}</span>   
+                    <span class="badge-carrinho">{{ carrinhoSerivce.obtemCarrinho().length }}</span>   
                 </a> 
             </li>
             <li><a routerLink="contato">Contatos</a></li>
@@ -23,9 +23,6 @@
             <li><a><i class="fa-brands fa-twitter"></i></a></li>
         </ul>
       </nav>
-        <form class="search-form">
-            <input type="text">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        <app-barra-pesquisa></app-barra-pesquisa>
     </div>
   </header>
